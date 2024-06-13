@@ -10,8 +10,9 @@ class Home extends Controller
 {
     public function index()
     {
-        $carbon = Carbon::with('desa')->get();
-        $geojson = Geojson::all();
-        return view('peta', compact('geojson', 'carbon'));
+
+        $breadcumb = 'Dashboard';
+        $icon = 'mdi mdi-home';
+        return view('home', compact('breadcumb', 'icon'));
     }
 }

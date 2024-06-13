@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\PetaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Home::class, 'index']);
+Route::post('/doLogin', [AuthController::class, 'doLogin'])->name('doLogin');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/', [AuthController::class, 'index'])->middleware('guest')->name('login');
+Route::get('/register', [AuthController::class, 'register'])->middleware('guest')->name('register');
+Route::post('/doRegist', [AuthController::class, 'doRegist'])->middleware('guest')->name('doRegist');
+
+Route::get('/home', [Home::class, 'index'])->middleware('auth')->name('home');
+Route::get('/visualisasiPeta', [PetaController::class, 'index'])->middleware('auth')->name('peta');

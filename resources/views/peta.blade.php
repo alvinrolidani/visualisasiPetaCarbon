@@ -192,7 +192,8 @@
 
                 if (data.desa.nama_desa === f.properties.WADMKD) {
                     html = '<b style="font-size:15px">' + data.desa.nama_desa + '</b><hr>';
-                    html += 'Kategori: ' + textKategori + '<br>';
+                    html += 'Luas Daerah: <b>' + data.desa.luas_desa + ' Km<sup>2</sup></b>' + '<br>';
+                    html += 'Kategori: <b>' + data.kategori.nama_kategori + ' ' + '</b>(' + textKategori + ')<br>';
                     html += 'Nilai Karbon: <b>' + data[`${subKategori}`] + ' ' + data.kategori.satuan + '</b>';
                 }
             }

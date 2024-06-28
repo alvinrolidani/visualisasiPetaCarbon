@@ -10,7 +10,8 @@ class PetaController extends Controller
 {
     public function index()
     {
-        $carbon = Carbon::with('desa')->get();
+        $carbon = Carbon::with(['desa', 'kategori'])->get();
+        // return response()->json($carbon);
         $geojson = Geojson::all();
         $breadcumb = 'Visualisasi Peta';
         $icon = 'mdi mdi-map';

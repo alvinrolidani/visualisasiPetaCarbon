@@ -15,4 +15,11 @@ class Home extends Controller
         $icon = 'mdi mdi-home';
         return view('home', compact('breadcumb', 'icon'));
     }
+
+    public function informasi()
+    {
+        $breadcumb = 'Informasi Karbon';
+        $icon = 'mdi mdi-information menu-icon';
+        return view('informasi', compact('breadcumb', 'icon'));
+    }
 }

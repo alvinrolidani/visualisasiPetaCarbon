@@ -23,4 +23,5 @@ Route::get('/register', [AuthController::class, 'register'])->middleware('guest'
 Route::post('/doRegist', [AuthController::class, 'doRegist'])->middleware('guest')->name('doRegist');
 
 Route::get('/home', [Home::class, 'index'])->middleware('auth')->name('home');
+Route::get('/informasi', [Home::class, 'informasi'])->middleware('auth')->name('informasi');
 Route::get('/visualisasiPeta', [PetaController::class, 'index'])->middleware('auth')->name('peta');

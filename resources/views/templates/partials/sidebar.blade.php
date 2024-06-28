@@ -22,9 +22,9 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('informasi') }}">
                 <span class="menu-title">Informasi Karbon</span>
-                <i class="mdi mdi mdi-information menu-icon"></i>
+                <i class="mdi mdi-information menu-icon"></i>
             </a>
         </li>
         <li class="nav-item">

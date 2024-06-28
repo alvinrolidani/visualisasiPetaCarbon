@@ -16,4 +16,8 @@ class Carbon extends Model
     {
         return $this->belongsTo(Geojson::class, 'desa_id', 'id');
     }
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class, 'kategori_id', 'id');
+    }
 }
